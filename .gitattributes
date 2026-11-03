@@ -1,0 +1,4 @@
+# Kept byte-for-byte: line ending conversion would break git apply and the profile.
+*.patch -text
+*.profdata binary
+*.exe binary
