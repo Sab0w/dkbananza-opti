@@ -1,0 +1,18 @@
+# DKBananza Opti. Read at every start. One NAME=VALUE per line, # for comments.
+# Your own %APPDATA%\eden\nx2_switches.txt wins over this file.
+#
+# Measured at the same spot in Donkey Kong Bananza (waterfall, docked, 1x): ~52-55 fps.
+# Delete the line below if you see graphical glitches.
+EDEN_NX2_UNSAFE_PREEMPTIVE_READS=1
+# Off: it let a channel run past a compute semaphore wait, and the game froze once (channel
+# waiting forever on a semaphore another channel had already reset). Costs ~1 ms per frame.
+#EDEN_NX2_QMD_ACQUIRE_SKIP=1
+# Measured slower (42 fps instead of 53): leave off.
+#EDEN_NX2_UBOREUSE=1
+#
+# Built in and on by default (=0 turns each off):
+#   EDEN_NX2_ALIAS_WATERMARK  texture alias check skipped while no alias changed
+#   EDEN_NX2_CAPTURE_STOP     shaders with data after their end are no longer rejected
+#   EDEN_NX2_ASYNC_SKIP       draws skip pipelines still being built (async shaders)
+
+# Tested: EDEN_NX2_SHADOW_SKIP=2 is ~11% faster but shadows jitter (cascades follow the camera). Leave off.

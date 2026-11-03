@@ -1,0 +1,22 @@
+# Games, keys and firmware are never committed.
+JEUX/
+*.keys
+*.nsp
+*.xci
+*.nca
+*.nup
+
+# Local builds, toolchain work and diagnostics.
+src/
+freeze/
+backup_config/
+DKBananza-Train/
+Eglantine*/
+Elgantine*/
+Selevet*/
+user/
+
+# Personal launchers (machine-specific paths).
+/Lancer_Bananza.bat
+/Profiler_Bananza.bat
+/Entrainer_PGO_Bananza.bat
